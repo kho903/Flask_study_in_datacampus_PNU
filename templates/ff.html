@@ -1,0 +1,31 @@
+키 : {{height|int}}<br>
+몸무게 : {{weight|int}}<br>
+
+표준 체중 : {{ (height|int - 100 ) * 0.85 }}<br>
+비만도 : {{ (weight|int)/((height|int - 100 ) * 0.85) *100 }}<br>
+{% if (weight|int)/((height|int - 100 ) * 0.85) *100 <=90 %}
+
+<h1>저체중</h1>
+<div class="col-sm-8">
+    <img src="static/image/low.jpg" width="500" height="300">
+</div>
+
+{% elif (weight|int)/((height|int - 100 ) * 0.85) *100 <=110 %}
+<h1>정상</h1>
+<div class="col-sm-8">
+    <img src="static/image/normal.png" width="500" height="300">
+</div>
+
+{% elif (weight|int)/((height|int - 100 ) * 0.85) *100 <=120 %}
+<h1>과체중</h1>
+<div class="col-sm-8">
+    <img src="static/image/littlep.jpg" width="500" height="300">
+</div>
+
+{% else %}
+<h1>비만</h1>
+<div class="col-sm-8">
+    <img src="static/image/pig.jpg" width="500" height="300">
+</div>
+
+{% endif %}

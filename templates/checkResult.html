@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for h in hobby %}
+        <li>{{h}}</li>
+        {% endfor %}
+        <h1>회사 : {{company}}</h1>
+        {% if company == "회사1" %}
+            <h1>회사1 입니다.</h1>
+        {% elif company == "회사2" %}
+            <h1>회사2 입니다.</h1>
+        {% else %}
+            <h1>기타....</h1>
+        {% endif %}
+    </ul>
+</body>
+</html>

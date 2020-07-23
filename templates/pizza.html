@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="pizorder" method="get" target="myi">
+        <label>고객명</label>
+        <input type="text" name="myname"><br>
+        <label>전화번호</label>
+        <input type="Tel" name="tel"><br>
+        <label>이메일</label>
+        <input type="email" name="email"><br>
+        <fieldset>
+            <legend>피자사이즈</legend>
+                <ol>
+                    <input type="radio" value="Small" name="size">small</input><br>
+                    <input type="radio" value="Medium" name="size">medium</input><br>
+                    <input type="radio" value="Large" name="size">large</input><br>
+                </ol>
+            <br>
+        </fieldset>
+        <label>희망배송시간</label>
+        <input type="time" min="10:00" max="22:00" name="time"><br>
+        <label>배송시요청사항</label>
+        <textarea name="re">
+        </textarea> <br>
+        <input type="submit" value="제출">
+    </form>
+
+    <iframe name="myi" width="100%" height="600" frameborder="0">
+    </iframe>
+</body>
+</html>
+
